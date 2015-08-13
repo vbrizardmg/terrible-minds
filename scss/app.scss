@@ -114,6 +114,7 @@ header{
 		background:url("../img/carac-2-small.jpg") no-repeat;
 		background-size:cover;
 		padding:60px 30px 20px 30px;
+		box-shadow: 0px -1px 12px #7c7c7c;
 			img{
 				width:70px;
 			}
@@ -122,6 +123,7 @@ header{
 		background:url("../img/carac-3-small.jpg") no-repeat;
 		background-size:cover;
 		padding:60px 30px 20px 30px;
+		box-shadow: 0px -1px 12px #7c7c7c;
 		border-bottom:8px solid $darkGreen;
 			h2{
 				margin:0;
@@ -183,6 +185,7 @@ header{
 			background-color: $darkGreen;
 			text-transform: uppercase;
 			margin-top: 30px;
+			font-family: $main-font;
 		}
 	}
 }
@@ -436,6 +439,200 @@ footer{
 	           	-webkit-transform:scale(0.9) rotateX(-60deg);
 	           	-ms-transform:scale(0.9) rotateX(-60deg);
 	       }
+	}
+
+}
+
+@media only screen and (min-width: 40.063em) { 
+
+	body{
+		font-size:20px;
+	}
+	header{
+		padding:0 60px;
+		#text-header{
+			padding: 0 60px 0 0;
+			bottom:100px;
+		}
+	}
+	#comments{
+		background:url('../img/comment-medium.jpg') no-repeat;
+		background-size:cover;
+		background-attachment:fixed;
+		padding:100px 0 0 0;
+
+		.comment-info{
+			width: 95%;
+			text-align: center;
+			margin:0 auto;
+			.stars{
+				width: 50%;
+				margin:20px 0;
+			}
+			.name{
+				margin-bottom:60px;
+			}
+		}	
+	}
+	#caracteristics{
+		h2{
+			font-size: 1.6em;
+			margin-top: 16px;
+		}
+		#title-carac1,#title-carac2,#title-carac3{
+			padding:60px 60px 40px 60px;
+			div:nth-child(2){
+				text-align: right;
+			}
+		}
+		#title-carac1{
+			background:url("../img/carac-1-medium.jpg") no-repeat;
+			background-size:cover;
+		}
+		#title-carac2{
+			background:url("../img/carac-2-medium.jpg") no-repeat;
+			background-size:cover;
+		}
+		#title-carac3{
+			background:url("../img/carac-3-medium.jpg") no-repeat;
+			background-size:cover;
+			border-bottom:8px solid $darkGreen;
+				h2{
+					margin-top:16px;
+				}
+		}
+	}
+	#order{
+		#bg-prix{
+			background:url('../img/price-medium.jpg') no-repeat;
+			background-size:cover;
+			padding: 400px 0 0 0;
+		}
+		#prix{
+			padding:40px 60px;
+		}
+		#info-order{
+			padding: 100px 60px;
+			.bt-buy{
+				margin-top: 60px;
+				padding: 30px 60px;
+			}
+		}
+	}
+	#tips{
+		background:url('../img/tips-medium.jpg') no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		background-position: center;
+		padding:100px 60px;
+		h2{
+			margin-bottom:16px;
+			margin-top: 20px;
+		}
+		#tip1,#tip2,#tip3,#tip4,#tip5{
+			div{
+				div:nth-child(2){
+					text-align: right;
+				}
+			}
+		}
+	}
+	#howtoplay{
+		#title-howto{
+			h2{
+				color: $white;
+				font-size: 1.5em;
+			}
+			background:url('../img/play-medium.jpg') no-repeat;
+			background-size:cover;
+			padding: 100px 60px 40px 60px;
+			line-height: 3em;
+			div:nth-child(2){
+				text-align: right;
+				padding-right: 0;
+			}
+		}
+		.info{
+			padding:0 80px;
+			text-align: center;
+			border-bottom:8px solid $darkGreen;
+			img:nth-child(1){
+				padding-top:100px;
+			}
+			img:nth-child(7){
+				width: 75%;
+			}
+			.cards-howto{
+				margin:60px auto;
+			}
+		}
+	}
+	footer{
+		#share{
+			//background-color:$brown;
+			padding:100px 60px;
+			background: url('../img/contact-medium.jpg') no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+			background-position: bottom center;
+			h2{
+				margin-bottom:40px;
+				margin-top: 0px;
+			}
+			.square-box{
+				//position: relative;
+				width: 25%;
+				//overflow: hidden;
+				//background-color:$green;
+				//float: left;
+			}
+			.square-box:nth-child(2){
+				//background-color:$darkGreen;
+			}
+			.square-box:before{
+			   // content: "";
+			   // display: block;
+			   // padding-top: 100%;
+			}
+			#fb,#twitter{
+				//position:  absolute;
+	    		//top: 0;
+	    		//left: 0;
+	    		//bottom: 0;
+	    		//right: 0;
+	    		div{
+	    		//	display: table;
+	  			//	width: 100%;
+	   			//	height: 100%;
+	    		}
+				a:link{
+					//display: table-cell;
+					//text-align: center;
+					//vertical-align: middle;
+					img{
+						//width: 60%;
+					}
+				}
+			}
+		}
+	}
+
+
+	.js{	
+
+		#caracteristics{
+			#rude-graphics,#language,#waterproof{
+				.info{
+					p{
+						padding: 100px 60px;
+					}
+				}
+				.info.active{
+					max-height:15em;
+					overflow:visible;
+				}
+			}
+		}
 	}
 
 }
