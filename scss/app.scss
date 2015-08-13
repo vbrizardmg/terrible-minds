@@ -89,7 +89,6 @@ header{
 	padding:60px 0 0 0;
 
 	.comment-info{
-		width: 95%;
 		text-align: center;
 		margin:0 auto;
 		.stars{
@@ -469,9 +468,6 @@ footer{
 		padding:100px 0 0 0;
 
 		.comment-info{
-			width: 95%;
-			text-align: center;
-			margin:0 auto;
 			.stars{
 				width: 50%;
 				margin:20px 0;
@@ -576,7 +572,6 @@ footer{
 	}
 	footer{
 		#share{
-			//background-color:$brown;
 			padding:100px 60px;
 			background: url('../img/contact-medium.jpg') no-repeat;
 			background-attachment:fixed;
@@ -587,43 +582,10 @@ footer{
 				margin-top: 0px;
 			}
 			.square-box{
-				//position: relative;
 				width: 25%;
-				//overflow: hidden;
-				//background-color:$green;
-				//float: left;
-			}
-			.square-box:nth-child(2){
-				//background-color:$darkGreen;
-			}
-			.square-box:before{
-			   // content: "";
-			   // display: block;
-			   // padding-top: 100%;
-			}
-			#fb,#twitter{
-				//position:  absolute;
-	    		//top: 0;
-	    		//left: 0;
-	    		//bottom: 0;
-	    		//right: 0;
-	    		div{
-	    		//	display: table;
-	  			//	width: 100%;
-	   			//	height: 100%;
-	    		}
-				a:link{
-					//display: table-cell;
-					//text-align: center;
-					//vertical-align: middle;
-					img{
-						//width: 60%;
-					}
-				}
 			}
 		}
 	}
-
 
 	.js{	
 
@@ -641,5 +603,168 @@ footer{
 			}
 		}
 	}
+
+}
+
+/* ---- LARGE SCREENS -------- */ 
+
+@media only screen and (min-width: 64.063em) { 
+
+	body{
+		font-size: 22px;
+	}
+
+	header{
+		background:url('../img/head-img-large.svg') no-repeat;
+		background-size:cover;
+		padding:0 100px;
+
+		img{
+			width: 60%;
+			margin-top: 280px;
+			margin-bottom:15px;
+		}
+		#text-header{
+			bottom:140px;
+		}
+		#ico-scroll{
+			margin-top: 0;
+			width: 80px;
+			position:absolute;
+			bottom:0px;
+			left: 50%;
+			margin-left:-80px;
+			transition:all .3s ease;
+				-webkit-transition:all .3s ease;
+				-moz-transition:all .3s ease;
+		}
+		a:link #ico-scroll:hover{
+			transform: scale(1.2,1.2);
+				-webkit-transform: scale(1.2,1.2);
+			transform-origin: 50% 50% 0;
+				-webkit-transform-origin: 50% 50% 0;
+		}
+	}
+
+	#comments{
+		background:url('../img/comment-large.jpg') no-repeat;
+		background-size:cover;
+		background-attachment:fixed;
+		padding:100px 100px 0 100px;
+	}
+
+	#caracteristics{
+		h2{
+			font-size: 1.6em;
+			margin-top: 16px;
+		}
+		#title-carac1,#title-carac2,#title-carac3{
+			padding:60px 60px 40px 60px;
+			height: 250px;
+			box-shadow:none;
+			margin:0;
+		}
+		#title-carac1{
+			background:url("../img/carac-1-medium.jpg") no-repeat;
+			background-size:cover;
+			background-position: center;
+		}
+		#title-carac2{
+			background:url("../img/carac-2-medium.jpg") no-repeat;
+			background-size:cover;
+			background-position: center;
+		}
+		#title-carac3{
+			background:url("../img/carac-3-medium.jpg") no-repeat;
+			background-size:cover;
+			background-position: center;
+			border-bottom:none;
+				h2{
+					margin-top:16px;
+				}
+		}
+		#rude-graphics,#language,#waterproof{
+			padding: 0;
+			.info{
+				box-sizing:border-box;
+			}
+
+		}
+	}
+
+	.js{
+		#caracteristics{
+			#rude-graphics,#language,#waterproof{
+				position:relative;
+				.info{
+					max-height:0;
+					overflow:hidden;
+					padding:0;
+					margin:0;
+						transition:max-height .3s ease;
+							-webkit-transition:max-height .3s ease;
+							-moz-transition:max-height .3s ease;
+						
+						p{
+							padding: 60px 30px;
+						}
+				}
+			}
+			#rude-graphics,#waterproof{
+				.info{
+
+					background-color:$darkGreen;
+					p{
+						color: $white;
+					}
+				}
+			}
+			#language{
+				.info{
+					background-color:$white;
+					p{
+						color: $darkGreen;
+					}
+				}
+			}
+		}
+		#tips,#howtoplay{
+			.btplus img{
+				transform: rotate(0deg);
+				transition:all .3s ease;
+				width: 70px;
+			}
+			.btplus.rotated img{
+				transform: rotate(-45deg);
+					-webkit-transform: rotate(-45deg);
+			}
+			.info{
+				max-height:0;
+				overflow:hidden;
+				transition:max-height .3s ease;
+					-webkit-transition:max-height .3s ease;
+					-moz-transition:max-height .3s ease;
+				
+			}
+			.info.active{
+				max-height:15em;
+				overflow:visible;
+			}
+		}
+		#howtoplay{
+			.info.active{
+				max-height:110em;
+			}
+		}
+		#tips{
+			.info{
+				margin-top: 20px;
+				padding:0;
+			}
+		}
+	}
+
+
+
 
 }

@@ -2,19 +2,17 @@
 // Documentation can be found at: http://foundation.zurb.com/docs
 $(document).foundation();
 
-
 window.onload=configurer;
-
 function configurer(e){
 	document.getElementsByTagName("body")[0].className += " js";
 	if($('body').hasClass('js')){
+
 		$(window).on('scroll',gererFixed);
 
 		$('.btplus').on('click',toggleAccordeon); 
+		$('#ico-scroll').on('click',descendre);
 	}
 }
-
-
 
 function gererFixed(e){
 	$hauteur= $(window).scrollTop();
@@ -36,6 +34,10 @@ function toggleAccordeon(e){
 	}else{
 		$($row).next('.info').children().addClass("animateOut");
 		$($row).next('.info').children().removeClass("animateIn");
-	}
-	
+	}	
+}
+function descendre(e){
+	$('body,html').animate({
+		scrollTop: $('#comments').offset().top
+	},1000,function(){});
 }
