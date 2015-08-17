@@ -85,7 +85,6 @@ header{
 	background-size:cover;
 	background-attachment:fixed;
 	width:100%;
-	height:100vh;
 	padding:60px 0 0 0;
 
 	.comment-info{
@@ -107,6 +106,9 @@ header{
 	h2{
 		font-size: 1.5em;
 		color: $white;
+	}
+	#title-carac1,#title-carac2,#title-carac3{
+		margin:0;
 	}
 	#title-carac1{
 		background:url("../img/carac-1-small.jpg") no-repeat;
@@ -138,6 +140,13 @@ header{
 				width:70px;
 			}
 	}
+	#rude-graphics,#language,#waterproof{
+				padding: 0;
+				.info{
+					box-sizing:border-box;
+				}
+
+			}
 }
 #order{
 	#bg-prix{
@@ -651,16 +660,32 @@ footer{
 		background-size:cover;
 		background-attachment:fixed;
 		padding:100px 100px 0 100px;
+		height: 100vh;
 	}
 
 	#caracteristics{
 		h2{
 			font-size: 1.6em;
 			margin-top: 16px;
+			margin-bottom:60px;
+			span{
+				position:relative;
+				padding-bottom: 20px;
+			}
+			span:after{	
+				position:absolute;
+				left: 0;
+				bottom:0;
+				width: 100%;
+				height: 8px;
+				border-bottom:8px solid $white;
+				content: "";
+
+			}
 		}
 		#title-carac1,#title-carac2,#title-carac3{
-			padding:60px 60px 40px 60px;
-			height: 250px;
+			padding:100px 60px 100px 60px;
+			height: auto;
 			box-shadow:none;
 			margin:0;
 		}
@@ -673,6 +698,13 @@ footer{
 			background:url("../img/carac-2-medium.jpg") no-repeat;
 			background-size:cover;
 			background-position: center;
+			h2{
+				color: $brown;
+				
+				span::after{
+					border-bottom:8px solid $brown;
+				}
+			}
 		}
 		#title-carac3{
 			background:url("../img/carac-3-medium.jpg") no-repeat;
@@ -681,90 +713,238 @@ footer{
 			border-bottom:none;
 				h2{
 					margin-top:16px;
+					margin-bottom:60px;
 				}
 		}
 		#rude-graphics,#language,#waterproof{
 			padding: 0;
 			.info{
 				box-sizing:border-box;
+				p{
+					max-width: 40%;
+					background-color:transparent;
+					color: $white;
+					padding:0 15px;
+				}
 			}
-
 		}
 	}
 
+	#order{
+		position:relative;
+		/* PARALLAX --- */
+		#bg-parallax1{
+			position:absolute;
+			top:0px;
+			left: 0;
+			background:url('../img/price-large.jpg') no-repeat;
+			background-size:cover;
+			background-position:0 0;
+			overflow:auto;
+			width: 100%;
+			height: 100%;
+			z-index: -10;
+		}
+		#bg-prix{
+			background:none;
+			background-color:transparent;
+			padding: 100px 0 400px 0;
+		}
+		#prix{
+			padding:40px 80px;
+			background-color:transparent;
+			p{
+				font-size: 1.75em;
+				font-weight: 400;
+			}
+			#current-price{
+				span{
+					position:relative;
+					padding-top:20px;
+				}	
+				span::before{
+					position:absolute;
+					left: 0;
+					top: 0;
+					height: 8px;
+					width: 100%;
+					border-top:8px solid #FFF;
+					content:"";
+				}	
+			}
+		}
+		#info-order{
+			padding: 100px 75px;
+			background:url('../img/order-bg.svg') no-repeat #FFF;
+			background-size:600px;
+			background-position:75% bottom;
+			.bt-buy{
+				transition: all .3s ease;
+				-webkit-transition: all .3s ease;
+				-moz-transition: all .3s ease;
+			}
+			.bt-buy:hover{
+				background-color:$green;
+			}
+		}
+	}
+	#tips{
+		background:url('../img/tips-large.jpg') no-repeat;
+		background-attachment:fixed;
+		background-size:cover;
+		background-position: center;
+		padding:100px 75px;
+		h2{
+			margin-bottom:30px;
+			margin-top: 20px;
+			span{
+				position:relative;
+				padding-bottom:20px;
+			}	
+			span::after{
+				position:absolute;
+				left: 0;
+				bottom: 0;
+				height: 8px;
+				width: 100%;
+				border-bottom:8px solid #FFF;
+				content:"";
+			}	
+		}
+		#tip1,#tip2,#tip3,#tip4,#tip5{
+			min-height: 250px;
+			padding-right: 100px;
+			border-bottom:none;
+		}
+	}
+	#howtoplay{
+		#title-howto{
+			h2{
+				span{
+					position:relative;
+					padding-bottom:20px;
+				}	
+				span::after{
+					position:absolute;
+					left: 0;
+					bottom: 0;
+					height: 8px;
+					width: 100%;
+					border-bottom:8px solid #FFF;
+					content:"";
+				}	
+			}
+			background:url('../img/play-large.jpg') no-repeat;
+			background-size:cover;
+			padding: 100px 75px 80px 75px;
+		}
+		.info{
+			padding:0 75px;
+			text-align: center;
+			.step{
+				display: block;
+				margin:0 auto 30px auto;
+			}
+			div{
+				padding:0 40px;
+			}
+			.cards-howto{
+				width: 60%;
+			}
+			.large-enter{
+				display: block;
+			}
+			.accroche{
+				display: block;
+				font-size: 1.5em;
+				font-weight: 400;
+				margin:60px 0;
+				span{
+					position:relative;
+					padding-bottom:20px;
+				}	
+				span::after{
+					position:absolute;
+					left: 0;
+					bottom: 0;
+					height: 8px;
+					width: 100%;
+					border-bottom:8px solid $darkGreen;
+					content:"";
+				}	
+				
+			}
+		}
+	}
+	footer{
+		#share{
+			padding:200px 75px;
+			background: url('../img/contact-large.jpg') no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+			background-position: bottom center;
+			h2{
+				//margin-bottom:40px;
+				//margin-top: 0px;
+			}
+			.square-box{
+				width: 15%;
+			}
+		}
+	}
 	.js{
 		#caracteristics{
 			#rude-graphics,#language,#waterproof{
 				position:relative;
 				.info{
-					max-height:0;
-					overflow:hidden;
+					max-height:inherit;
+					overflow:visible;
 					padding:0;
 					margin:0;
-						transition:max-height .3s ease;
-							-webkit-transition:max-height .3s ease;
-							-moz-transition:max-height .3s ease;
-						
+						transition:none
 						p{
-							padding: 60px 30px;
+							padding:0;
 						}
 				}
 			}
 			#rude-graphics,#waterproof{
 				.info{
 
-					background-color:$darkGreen;
+					box-sizing:border-box;
+					background-color:transparent;
 					p{
+						
 						color: $white;
+						padding:0 15px;
 					}
 				}
 			}
 			#language{
 				.info{
-					background-color:$white;
+					background-color:transparent;
 					p{
-						color: $darkGreen;
+						color: $brown;
+						padding:0 15px;
 					}
 				}
 			}
 		}
 		#tips,#howtoplay{
 			.btplus img{
-				transform: rotate(0deg);
-				transition:all .3s ease;
-				width: 70px;
-			}
-			.btplus.rotated img{
-				transform: rotate(-45deg);
-					-webkit-transform: rotate(-45deg);
+				transform: none;
+				transition:none;
+				display: none;
 			}
 			.info{
-				max-height:0;
-				overflow:hidden;
-				transition:max-height .3s ease;
-					-webkit-transition:max-height .3s ease;
-					-moz-transition:max-height .3s ease;
+				max-height:inherit;
+				overflow:visible;
+				transition:none;
 				
 			}
 			.info.active{
-				max-height:15em;
+				max-height:inherit;
 				overflow:visible;
 			}
 		}
-		#howtoplay{
-			.info.active{
-				max-height:110em;
-			}
-		}
-		#tips{
-			.info{
-				margin-top: 20px;
-				padding:0;
-			}
-		}
 	}
-
-
-
-
 }

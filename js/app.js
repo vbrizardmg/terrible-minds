@@ -7,7 +7,16 @@ function configurer(e){
 	document.getElementsByTagName("body")[0].className += " js";
 	if($('body').hasClass('js')){
 
-		$(window).on('scroll',gererFixed);
+
+		//console.log($('#order').offset());
+		$(document).scroll(parallaxPrix);
+			
+		// $(document).scroll(function(){
+
+		// var x = $(this).scrollTop();
+		// console.log(x);
+		// $('#bg-prix').css('background-position','0% '+parseInt(-x/10)+'px');
+		// });
 
 		$('.btplus').on('click',toggleAccordeon); 
 		$('#ico-scroll').on('click',descendre);
@@ -40,4 +49,12 @@ function descendre(e){
 	$('body,html').animate({
 		scrollTop: $('#comments').offset().top
 	},1000,function(){});
+}
+
+function parallaxPrix(e){
+		var scrolled=$(this).scrollTop();
+		var target=$('#bg-parallax1').offset().top;
+
+
+		$('#bg-parallax1').css('top',(300-((scrolled)*.25))+'px');
 }
