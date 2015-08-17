@@ -948,3 +948,57 @@ footer{
 		}
 	}
 }
+
+
+@media only screen and (min-width: 90.063em) { 
+	#caracteristics{
+		#title-carac1,#title-carac2,#title-carac3{
+			padding:100px 60px 80px 60px;
+			div:nth-child(2){
+				text-align: right;
+			}
+		}
+		#title-carac1{
+			background:url("../img/carac-1-large.jpg") no-repeat;
+			background-size:cover;
+		}
+		#title-carac2{
+			background:url("../img/carac-2-large.jpg") no-repeat;
+			background-size:cover;
+		}
+		#title-carac3{
+			background:url("../img/carac-3-large.jpg") no-repeat;
+			background-size:cover;
+			border-bottom:8px solid $darkGreen;
+				h2{
+					margin-top:16px;
+				}
+		}
+	}
+	#howtoplay{
+		.info{
+			.cards-howto{
+				width: 40%;
+			}
+		}
+	}
+	footer{
+		#share{
+			padding:200px 75px;
+			background: url('../img/contact-large.jpg') no-repeat;
+			background-attachment:fixed;
+			background-size:cover;
+			background-position: bottom center;
+			h2{
+				//margin-bottom:40px;
+				//margin-top: 0px;
+			}
+			.square-box{
+				width: 10%;
+			}
+		}
+	}
+
+
+
+}
