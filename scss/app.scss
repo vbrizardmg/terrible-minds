@@ -33,6 +33,14 @@ p,li{
 	font-family:$parag-font;
 	font-weight:300;
 }
+.company{
+	color:$darkGreen;
+	text-transform:uppercase;
+	font-weight:700;
+	#st{
+		text-transform: none;
+	}
+}
 header{
 	background:url('../img/head-img-small.svg') no-repeat;
 	background-size:cover;
@@ -42,13 +50,12 @@ header{
 	position:relative;
 
 	#fb-logo{
-		width: 100px;
-		position:fixed;
-		top:200px;
-		right:0;
-		z-index: 9999;
+		width: 80px;
+		position:absolute;
+		top:60px;
+		left:0;
+		z-index: 999;
 		text-align:right;
-		background-color:$darkGreen;
 
 		img{
 			margin:0;
@@ -62,6 +69,9 @@ header{
 			padding:20px;
 			text-transform: none;
 			letter-spacing: 1px;
+			a:link,a:visited,a:active{
+				color: $white;
+			}
 		}
 		background-color:$darkGreen;
 		transform: rotate(-90deg);
@@ -75,7 +85,7 @@ header{
 		position:fixed;
 		top:0;
 		right:0;
-		z-index: 9999;
+		z-index: 999;
 	}
 
 	img{
@@ -160,6 +170,9 @@ header{
 				padding: 0;
 				.info{
 					box-sizing:border-box;
+					p{
+						max-width: 600px;
+					}
 				}
 
 			}
@@ -238,6 +251,12 @@ header{
 		border-bottom: 4px solid $green;
 		padding-bottom:15px;
 		margin-bottom:30px;
+		.info{
+			p{
+				line-height: 1.5;
+				max-width: 550px;
+			}
+		}
 	}
 	#tip2,#tip3,#tip4{
 		h2 {
@@ -271,6 +290,10 @@ header{
 		.step{
 			width: 80px;
 			margin-bottom:8px;
+		}
+		.step ~ p{
+			max-width: 600px;
+			margin:0 auto;
 		}
 		.cards-howto{
 			margin:20px auto;
@@ -369,7 +392,7 @@ footer{
 				}
 			}
 			.info.active{
-				max-height:15em;
+				max-height:20em;
 				overflow:visible;
 			}
 		}
@@ -410,7 +433,7 @@ footer{
 			
 		}
 		.info.active{
-			max-height:15em;
+			max-height:20em;
 			overflow:visible;
 		}
 	}
@@ -484,6 +507,29 @@ footer{
 		#text-header{
 			padding: 0 60px 0 0;
 			bottom:100px;
+		}
+		#buy-header,#fb-logo{
+			transition:all .5s ease;
+				-webkit-transition:all .5s ease;
+				-moz-transition:all .5s ease;
+			&:hover{
+				background-color:$green;
+			}
+		}
+		#fb-logo{
+			width: 66px;
+			position:fixed;
+			top:257px;
+			right:0;
+			left: inherit;
+			z-index: 999;
+			text-align:right;
+			background-color:#81b33c;
+			padding:20px;
+			img{
+				margin:0;
+				width: 100%;
+			}
 		}
 	}
 	#comments{
@@ -648,6 +694,21 @@ footer{
 			width: 60%;
 			margin-top: 280px;
 			margin-bottom:15px;
+		}
+		#fb-logo{
+			width: 68px;
+			position:fixed;
+			top:272px;
+			right:0;
+			left: inherit;
+			z-index: 999;
+			text-align:right;
+			background-color:#81b33c;
+			padding:20px;
+			img{
+				margin:0;
+				width: 100%;
+			}
 		}
 		#text-header{
 			bottom:140px;
@@ -905,10 +966,6 @@ footer{
 			background-attachment:fixed;
 			background-size:cover;
 			background-position: bottom center;
-			h2{
-				//margin-bottom:40px;
-				//margin-top: 0px;
-			}
 			.square-box{
 				width: 15%;
 			}
@@ -1020,7 +1077,5 @@ footer{
 			}
 		}
 	}
-
-
 
 }

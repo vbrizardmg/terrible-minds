@@ -3,9 +3,17 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <meta property="og:url" content="http://www.thatterriblegame.com" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="That Terrible Game" />
+    <meta property="og:description" content="The strategic would you rather game." />
+    <meta property="og:image" content="http://www.thatterriblegame.com/img/og-image.jpg" />
+
     <title>That terrible game</title>
     <link rel="stylesheet" href="stylesheets/app.css" />
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+    <link rel="icon" type="image/png" href="img/favicon.png" />
     <script src="//use.typekit.net/ozp6cvc.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <script src="bower_components/modernizr/modernizr.js"></script>
@@ -14,9 +22,9 @@
     <header>
       <h1>That terrible game</h1>
       <div id="buy-header">
-        <p>buy now</p>
+        <p><a href="#info-order">pre-order now</a></p>
       </div>
-      <div id="fb-logo"><img src="img/logo-fb.svg" alt="Logo de facebook"></div>
+      <div id="fb-logo"><a href="https://www.facebook.com/thatterriblegame" target="_blank"><img src="img/logo-fb.svg" alt="Logo de facebook"></a></div>
       <div id="text-header">
         <img src="img/logo.svg" alt="Logo of terrible minds."/>
         <h2>The strategic would you rather game</h2>
@@ -70,8 +78,8 @@
       <div id="order">
         <div id="bg-prix">
           <div id="prix">
-            <p id="current-price"><span>$25.00</span></p>
-            <p id="small-price">$21.25</p>
+            <p id="current-price"><span>$21.25</span></p>
+            <p id="small-price">$25.00</p>
           </div><!--end prix -->
         </div>
         <div id="info-order">
@@ -79,7 +87,7 @@
           <h3>that terrible game</h3>
           <p>Be the first to play and enjoy a lovely discount.</p>
           <p>PRE-ORDER your copy now and save 15% OFF. </p>
-          <p>Order That Terrible Game now and bring your parties to another level.</p>
+          <p class="company">Pre-orders ends on November 15<span id="st">th</span>. <br><span id="shipping">Shipping will start right after the pre-order period.</span></p>
           <p>Product details:</p>
           <ul>
             <li>Resistant</li>
@@ -89,12 +97,12 @@
           <div>
           <a href="#"
               class="button bt-buy snipcart-add-item"
-              data-item-id="1"
+              data-item-id="2"
               data-item-name="That Terrible Game pack"
-              data-item-price="25.00"
-              data-item-weight="20"
+              data-item-price="21.25"
+              data-item-weight="4000"
               data-item-url="/"
-              data-item-description="That Terrible Game package">Order now</a></div>
+              data-item-description="That Terrible Game package. Pre-orders ends on November 15th. Shipping will start right after the pre-order period.">Pre-Order now</a></div>
        </div>
        <div id="bg-parallax1" class="show-for-large-up"></div>
       </div><!-- end order -->
@@ -105,14 +113,14 @@
               <div class="small-8 large-12 columns"><h2><span>Mix and Match</span></h2></div>
               <div class="small-4 columns"><a class="btplus" href="javaScript:void(0)"><img src="img/ico-plus.svg"></a></div>
             </div>
-            <div class="info"><p>With 250 questions you can mix and match with each other. THAT TERRIBLE GAME gives you more than 50, 000 question possibilities. You will most likely never answer the same question twice.</p></div>
+            <div class="info"><p>With 250 questions you can mix and match with each other. <span class="company">That Terrible Game</span> gives you more than 50, 000 question possibilities. You will most likely never answer the same question twice.</p></div>
           </div><!-- end tip1 -->
           <div id="tip2" class="small-12 large-6 columns">
             <div class="row">
               <div class="small-8 large-12 columns"><h2><span>Strategic</span></h2></div>
               <div class="small-4 columns"><a class="btplus" href="javaScript:void(0)"><img src="img/ico-plus.svg"></a></div>
             </div>
-            <div class="info"><p>With its action cards, THAT TERRIBLE GAME is the first «Would you rather» card game designed to be strategic. You need to think before your next move and play your cards.</p></div>
+            <div class="info"><p>With its action cards, <span class="company">That Terrible Game</span> is the first «Would you rather» card game designed to be strategic. You need to think before your next move and play your cards.</p></div>
           </div><!-- end tip2 -->
           <div id="tip3" class="small-12 large-6 columns">
             <div class="row">
@@ -133,7 +141,7 @@
               <div class="small-8 large-12 columns"><h2><span>Shocking and disturbing</span></h2></div>
               <div class="small-4 columns"><a class="btplus" href="javaScript:void(0)"><img src="img/ico-plus.svg"></a></div>
             </div>
-            <div class="info"><p>THAT TERRIBLE GAME is not for the faint of heart. It is quite depraved and its content can be very explicit. Please note, we are not and do not encourage any homophobic, racist, or any wrong behaviour. All questions related to those subjects, are there to prove that we need to be human and make a change once and for all!</p></div>
+            <div class="info"><p><span class="company">That Terrible Game</span> is not for the faint of heart. It is quite depraved and its content can be very explicit.</p></div>
           </div><!-- end tip5 -->
         </div>
       </div><!-- end tips -->
@@ -178,18 +186,13 @@
         <div class="row">
           <div class="square-box">
             <div id="fb">
-              <div><a href=""><img src="img/logo-fb.svg" alt="Logo de facebook."></a></div>
-            </div>
-          </div>
-          <div class="square-box">
-            <div id="twitter">
-              <div><a href=""><img src="img/logo-twitter.svg" alt="Logo de twitter."></a></div>
+              <div><a href="https://www.facebook.com/sharer/sharer.php?u=http%3A//thatterriblegame.com" target="_blank"><img src="img/logo-fb-2.svg" alt="Logo de facebook."></a></div>
             </div>
           </div>
         </div>
       </div>
       <div id="copyright">
-        <p>Copyright © All Rights Reserved <span>THAT TERRIBLE GAME</span></p>
+        <p>Copyright © All Rights Reserved <span><span class="company">That Terrible Game</span></span></p>
       </div>
     </footer>
     <script type="text/javascript"
@@ -198,7 +201,7 @@
     <script type="text/javascript" 
       id="snipcart" 
       src="https://cdn.snipcart.com/scripts/snipcart.js"
-      data-api-key="OGNmMTdlYzUtMmZkNy00MjNlLWEyMGUtNjZhMzk0YjY2NDE4"></script>
+      data-api-key="NWUxMDUzN2YtYWVjYi00MDFjLWEzNmItM2UzOTliY2IyMGE5"></script>
 
     <link type="text/css"
       id="snipcart-theme"
@@ -206,6 +209,8 @@
       rel="stylesheet" />
     <script src="bower_components/jquery/dist/jquery.min.js"></script>
     <script src="bower_components/foundation/js/foundation.min.js"></script>
-    <script src="js/app.js"></script>
+    <script src="js/vendor/picturefill.min.js"></script>
+    <script src="js/vendor/html5shiv.min.js"></script>
+    <script src="js/app-min.js"></script>
   </body>
 </html>

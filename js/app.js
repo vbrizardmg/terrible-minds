@@ -20,6 +20,8 @@ function configurer(e){
 
 		$('.btplus').on('click',toggleAccordeon); 
 		$('#ico-scroll').on('click',descendre);
+		$('#buy-header').on('click',descendreOrder);
+
 	}
 }
 
@@ -48,6 +50,12 @@ function toggleAccordeon(e){
 function descendre(e){
 	$('body,html').animate({
 		scrollTop: $('#comments').offset().top
+	},1000,function(){});
+}
+function descendreOrder(e){
+
+	$('body,html').animate({
+		scrollTop: $('#info-order').offset().top
 	},1000,function(){});
 }
 
